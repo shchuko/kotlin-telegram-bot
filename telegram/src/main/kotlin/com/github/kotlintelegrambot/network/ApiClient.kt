@@ -420,6 +420,7 @@ internal class ApiClient(
         replyToMessageId: Long?,
         allowSendingWithoutReply: Boolean?,
         replyMarkup: ReplyMarkup?,
+        hasSpoiler: Boolean?,
     ): Call<Response<Message>> = when (video) {
         is ByFile, is ByByteArray -> service.sendVideo(
             chatId,
@@ -438,6 +439,7 @@ internal class ApiClient(
             if (replyToMessageId != null) convertString(replyToMessageId.toString()) else null,
             if (allowSendingWithoutReply != null) convertString(allowSendingWithoutReply.toString()) else null,
             if (replyMarkup != null) convertJson(replyMarkup.toString()) else null,
+            if (hasSpoiler != null) convertJson(hasSpoiler.toString()) else null,
         )
 
         is ByFileId, is ByUrl -> service.sendVideo(
@@ -457,6 +459,7 @@ internal class ApiClient(
             replyToMessageId,
             allowSendingWithoutReply,
             replyMarkup,
+            hasSpoiler,
         )
     }
 

@@ -257,6 +257,7 @@ internal interface ApiService {
         @Part(ApiConstants.REPLY_TO_MESSAGE_ID) replyToMessageId: RequestBody?,
         @Part(ApiConstants.ALLOW_SENDING_WITHOUT_REPLY) allowSendingWithoutReply: RequestBody?,
         @Part(ApiConstants.REPLY_MARKUP) replyMarkup: RequestBody? = null,
+        @Part(ApiConstants.HAS_SPOILER) hasSpoiler: RequestBody?,
     ): Call<Response<Message>>
 
     @FormUrlEncoded
@@ -274,6 +275,7 @@ internal interface ApiService {
         @Field(ApiConstants.REPLY_TO_MESSAGE_ID) replyToMessageId: Long?,
         @Field(ApiConstants.ALLOW_SENDING_WITHOUT_REPLY) allowSendingWithoutReply: Boolean?,
         @Field(ApiConstants.REPLY_MARKUP) replyMarkup: ReplyMarkup? = null,
+        @Field(ApiConstants.HAS_SPOILER) hasSpoiler: Boolean?,
     ): Call<Response<Message>>
 
     @FormUrlEncoded

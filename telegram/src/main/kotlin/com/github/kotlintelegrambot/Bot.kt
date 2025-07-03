@@ -546,6 +546,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendVideo(
         chatId,
         TelegramFile.ByFile(video),
@@ -559,6 +560,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     @Deprecated(
@@ -577,6 +579,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendVideo(
         chatId,
         TelegramFile.ByFileId(fileId),
@@ -590,6 +593,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     fun sendPhoto(
@@ -679,6 +683,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendVideo(
         chatId,
         video,
@@ -692,6 +697,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     /**
