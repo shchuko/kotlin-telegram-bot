@@ -345,6 +345,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendPhoto(
         chatId,
         TelegramFile.ByFile(photo),
@@ -355,6 +356,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     @Deprecated(
@@ -371,6 +373,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendPhoto(
         chatId,
         TelegramFile.ByFileId(photo),
@@ -381,6 +384,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     @Deprecated(
@@ -598,6 +602,7 @@ class Bot private constructor(
         replyToMessageId: Long? = null,
         allowSendingWithoutReply: Boolean? = null,
         replyMarkup: ReplyMarkup? = null,
+        hasSpoiler: Boolean? = null,
     ) = apiClient.sendPhoto(
         chatId,
         photo,
@@ -608,6 +613,7 @@ class Bot private constructor(
         replyToMessageId,
         allowSendingWithoutReply,
         replyMarkup,
+        hasSpoiler,
     ).call()
 
     fun sendAudio(

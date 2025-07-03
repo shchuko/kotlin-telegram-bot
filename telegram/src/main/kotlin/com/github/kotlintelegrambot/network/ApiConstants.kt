@@ -10,6 +10,7 @@ internal object ApiConstants {
     const val ALLOW_SENDING_WITHOUT_REPLY = "allow_sending_without_reply"
     const val REPLY_MARKUP = "reply_markup"
     const val MESSAGE_THREAD_ID = "message_thread_id"
+    const val HAS_SPOILER = "has_spoiler"
 
     object SendMediaGroup {
         const val MEDIA = "media"
